@@ -14,6 +14,7 @@ public class OOPS_Line_Comparison {
 		OOPS_Line_Comparison lineComparison = new OOPS_Line_Comparison();
 		lineComparison.lengthCalculation();
 		lineComparison.lengthComparison();
+		lineComparison.compareMethod();
 	}
 	
 	 //method: length calculation	
@@ -30,7 +31,7 @@ public class OOPS_Line_Comparison {
 			y2 = sc.nextDouble();
 				
 				
-			double length1 = Math.sqrt(Math.pow((x2 - x1),2) + Math.pow((y2 -y1),2));
+			length1 = Math.sqrt(Math.pow((x2 - x1),2) + Math.pow((y2 -y1),2));
 			System.out.println("Length of 1st Line: "+length1);
 			
 			System.out.println("Enter the  Co-ordinates of 2nd Line");
@@ -44,13 +45,26 @@ public class OOPS_Line_Comparison {
             System.out.println("Length of 2nd Line: "+length2);	    
          }
 	 
+	// creating method to check length of lines are equal or not. 
 	 public static void lengthComparison(){
          if(length1 == length2){
                  System.out.println("The length of line are equals");
          }
-         else
-         {
+         else{
                System.out.println("The length of line are not equals");
          }
-   }
+     }
+	 
+	 // creating method for compare length of lines 
+     public static void compareMethod(){
+			if (length1 >= length2) {
+				System.out.println("Length of Line 1 is Greater than length of line 2");	
+				 }
+			else if (length1 <= length2) {
+				System.out.println("Length of Line 2 is Greater than length of line 1");	
+			    }
+			else {
+				System.out.println("Length of Line 1 is Equal to length of line 2");
+			    }
+     	}
 }
